@@ -15,4 +15,10 @@ public class LoginTest {
         Assertions.assertEquals("arbi", login2.getUsername());
         Assertions.assertEquals("secret", login2.getPassword());
     }
+
+    @Test
+    void testToString() {
+        var login = Login.create("arbi", "secret");
+        System.out.println(login);
+    }
 }
