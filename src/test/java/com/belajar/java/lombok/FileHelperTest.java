@@ -1,8 +1,10 @@
 package com.belajar.java.lombok;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class FileHelperTest {
 
@@ -10,5 +12,12 @@ public class FileHelperTest {
     void testPom() throws Exception {
         String text = FileHelper.loadFile("pom.xml");
         System.out.println(text);
+    }
+
+    @Test
+    void testFileNotFound() {
+        Assertions.assertThrows(FileNotFoundException.class, () -> {
+           FileHelper.loadFile("NotFound.txt");
+        });
     }
 }
