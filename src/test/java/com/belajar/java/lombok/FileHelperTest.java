@@ -3,7 +3,6 @@ package com.belajar.java.lombok;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 
 public class FileHelperTest {
